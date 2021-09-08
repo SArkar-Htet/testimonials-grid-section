@@ -1,0 +1,51 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 70px 23px;
+
+  .card {
+    padding: 25px 30px;
+    border-radius: 10px;
+
+    &-1 {
+      background-color: $violet;
+      background-image: url("../../images/bg-pattern-quotation.svg");
+      background-repeat: no-repeat;
+      background-position: 88% 0;
+    }
+
+    &__header {
+      display: flex;
+      align-items: center;
+
+      span {
+        display: block;
+      }
+    }
+
+    &__avatar {
+      width: 32px;
+      border-radius: 50%;
+      
+      &-daniel {
+        border: 2px solid hsla(0, 0%, 100%, 0.5);
+      }
+    }
+
+    &__person-details {
+      padding-left: 1rem;
+    }
+
+    &__name {
+      font-size: $font-md;
+    }
+
+    &__stat {
+      opacity: 50%;
+    }
+
+    &__details {
+      line-height: 1.5;
+    }
+  }
+}
