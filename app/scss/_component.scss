@@ -1,17 +1,37 @@
 .container {
   display: grid;
   grid-template-columns: 1fr;
+  gap: 24px;
   padding: 70px 23px;
 
   .card {
-    padding: 25px 30px;
+    padding: 25px 33px;
     border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
 
     &-1 {
       background-color: $violet;
       background-image: url("../../images/bg-pattern-quotation.svg");
       background-repeat: no-repeat;
       background-position: 88% 0;
+    }
+
+    &-2 {
+      background-color: $darkGrayishBlue;
+    }
+
+    &-3 {
+      background-color: $white;
+      color: $darkGrayishBlue;
+    }
+
+    &-4 {
+      background-color: $darkBlackishBlue;
+    }
+
+    &-5 {
+      background-color: $white;
+      color: $darkGrayishBlue;
     }
 
     &__header {
@@ -26,9 +46,10 @@
     &__avatar {
       width: 2rem;
       border-radius: 50%;
-      
-      &-daniel {
-        border: 2px solid hsla(0, 0%, 100%, 0.5);
+      border: 2px solid hsla(0, 0%, 100%, 0.5);
+
+      &--violet {
+        border: 2px solid hsla(263, 55%, 52%, 0.7);
       }
     }
 
