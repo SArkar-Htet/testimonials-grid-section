@@ -1,18 +1,11 @@
 .container {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-areas: "card1" "card2" "card3" "card4" "card5";
   gap: 1.5rem;
   padding: 4.375rem 1.5rem;
-  max-width: 70rem;
-  margin: 0 auto;
-
-  @include breakpoint-up(medium) {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: 
-      "card1 card1 card4 card4"
-      "card2 card2 card5 card5"
-      "card3 card3 card5 card5";
-  }
+  max-width: calc(70rem + 3rem);
+  margin: auto;
 
   @include breakpoint-up(large) {
     grid-template-columns: repeat(4, 1fr);
