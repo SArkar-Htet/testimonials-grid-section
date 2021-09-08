@@ -3,6 +3,23 @@
   grid-template-columns: 1fr;
   gap: 1.5rem;
   padding: 4.375rem 1.5rem;
+  max-width: 70rem;
+  margin: 0 auto;
+
+  @include breakpoint-up(medium) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+      "card1 card1 card4 card4"
+      "card2 card2 card5 card5"
+      "card3 card3 card5 card5";
+  }
+
+  @include breakpoint-up(large) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+      "card1 card1 card2 card5"
+      "card3 card4 card4 card5";
+  }
 
   .card {
     padding: 1.5rem 2.0625rem;
@@ -10,6 +27,7 @@
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
 
     &-1 {
+      grid-area: card1;
       background-color: $violet;
       background-image: url("../../images/bg-pattern-quotation.svg");
       background-repeat: no-repeat;
@@ -17,19 +35,23 @@
     }
 
     &-2 {
+      grid-area: card2;
       background-color: $darkGrayishBlue;
     }
 
     &-3 {
+      grid-area: card3;
       background-color: $white;
       color: $darkGrayishBlue;
     }
 
     &-4 {
+      grid-area: card4;
       background-color: $darkBlackishBlue;
     }
 
     &-5 {
+      grid-area: card5;
       background-color: $white;
       color: $darkGrayishBlue;
     }
