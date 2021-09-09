@@ -7,6 +7,14 @@
   max-width: calc(70rem + 3rem);
   margin: auto;
 
+  @include breakpoint-up(medium) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+      "card1 card2 card3"
+      "card1 card4 card4"
+      "card5 card5 card5";
+  }
+
   @include breakpoint-up(large) {
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: 
